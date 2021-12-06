@@ -1,0 +1,80 @@
+/*CREATING FRONT PAGE*/
+
+.ui-page#front, .ui-page#list_view {
+    height: 100%;
+}
+
+.ui-page#front .ui-content, .ui-page#list_view .ui-content{
+    height: 100%;
+    padding: 0;
+}
+
+
+#front_header_image {
+    max-height: 23vh !important;
+    height: 18vh !important;
+    width: 100%;
+    text-align: center;
+    padding: 1vh 0 !important;
+}
+
+#front_header_image img {
+    max-width: 50%;
+    max-height: 100%;
+}
+
+.front_nav {
+    margin: 0 !important;
+    overflow-y: hidden;
+    height: 80vh !important;
+}
+
+.front_nav .ui-controlgroup-controls {
+    height: 100%;
+}
+
+.front_navitem {
+    border-radius: 0px !important;
+    height: 25%;
+    padding: 0 !important;
+    border-bottom: 1px solid lightgray;
+    border-left-style: none !important;
+    border-right-style: none !important;
+    background-color: #172d5f !important;
+    color: #f8f8f8 !important;
+    text-shadow: none !important;
+ }
+
+ .front_navitem div {
+     margin:auto;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     height: 1em;
+ }
+
+ .front_nav a {
+     background-size: cover;
+     font-size: 1.2em;
+     max-height: 20vh;
+ }
+
+ .front_nav .map-link {
+    background-image: url("../img/bg1.jpg");
+ }
+
+ .front_nav .list-link {
+    background-image: url("../img/bg2.jpg");
+ }
+
+ .front_nav .how-to-link {
+    background-image: url("../img/bg3.jpg");
+ }
+
+ .front_nav .about-link {
+    background-image: url("../img/bg4.jpg");
+ }
+
+ 

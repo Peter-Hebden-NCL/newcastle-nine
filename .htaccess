@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_REFERER} !^http://phd.sidestep.me/newcastle-nine-factorial$
+RewriteRule index.html - [F,NC]

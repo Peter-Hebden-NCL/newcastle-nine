@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <link media="screen" rel="stylesheet" type="text/css" href="css/index.css">
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+        
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.32&key=API_KEY_HERE"></script>
+        <!--GOOGLE MAPS API KEY - https://developers.google.com/maps/documentation/javascript/get-api-key -->
+        
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <title>Newcastle nine! A poem written by the city</title>
+
+        
+        <style type="text/css" media="print">
+            @page {
+                size: auto;   /* auto is the initial value */
+                margin: 0.5em;  /* this affects the margin in the printer settings */
+            }
+
+            #ncl-poem-title {
+                text-align: center;
+                margin: 0;
+                padding: 2.5vh 0;
+                width: 100%;
+                top: 0;
+                height: 5vh;
+
+                width:100%;
+                margin: auto !important;
+            }
+
+            #poem-number {
+                text-align: center;
+                margin-bottom:3em;
+                font-style: italic;
+            }
+
+            #ncl-poem-text {
+                padding: 0 2.5% 0 4em;
+            }
+
+            #front {
+                height: auto;
+            }
+
+            #map_view, #ncl-poem-redo, #ncl-poem-print {
+                display: none;
+            }
+
+            #poem-number {
+                display: block !important;
+            }
+
+            #poem-container {
+                width: 100%;
+            }
+
+            #ncl-poem-text {
+                overflow-y: visible
+            }
+
+            * {
+                position: relative !important;
+                height: auto !important;
+                overflow: auto !important;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        
+        <!-- HOME/FRONT PAGE -->
+
+        <div data-role="page" id="front">
+            <div class="ui-content" role="main">
+                
+                <div id="map_view">
+                    <div id="map-wrapper">
+                            <div id="map" class="not_loaded"><br/><br/><strong>Map loading...</strong></div>
+                    </div>
+                    <div data-role="footer" data-position="fixed">
+                        <!-- Main Map navigation -->
+                        <div data-role="navbar">
+                            <ul>
+                                <li><a class="reload-map">Reload Map</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="poem-container">
+                    <h1 id="ncl-poem-title">{Newcastle nine!}</h1>
+                    <div id="poem-number" class="hidden"><!-- number generated here --></div>
+                    <div id="ncl-poem-text"></div>
+
+                    <!--the map interface container-->
+                    <a href="#map_view"><div id="ncl-poem-map" class="front_navitem navitem map-click"></div></a>
+
+                    <!--map buttons-->
+                    <div id="ncl-poem-redo"><p>{erase}</p></div>
+                    <div id="ncl-poem-print"><p>{print}</p></div>
+                </div>
+
+            </div>
+            
+        </div>
+    </body>
+</html>

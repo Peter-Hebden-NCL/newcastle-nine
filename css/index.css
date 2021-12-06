@@ -1,0 +1,453 @@
+/*FONTS*/
+
+@font-face {
+    font-family: 'gillsans';
+    src: url('css/gillsans-light-webfont.woff2') format('woff2'),
+         url('css/gillsans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gillsans';
+    src: url('css/gillsans-lightitalic-webfont.woff2') format('woff2'),
+         url('css/gillsans-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'gillsans';
+    src: url('css/gillsans-webfont.woff2') format('woff2'),
+         url('css/gillsans-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gillsans';
+    src: url('css/gillsans-italic-webfont.woff2') format('woff2'),
+         url('css/gillsans-italic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+body, input, select, textarea, button, .ui-btn {
+    font-family: "gillsans", sans-serif !important; 
+}
+
+
+/*FUNCTIONAL*/
+
+#map, #loading, #error {
+    height: 100%;
+    text-align: center;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */ 
+    overflow-y: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.v_collapsible {
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+    transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.h_collapsible {
+    overflow: hidden;
+    width: 0;
+    -webkit-transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+    transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.ui-page{
+    min-height: 95%;
+}
+
+.fallback {
+    z-index: 99;
+}
+
+
+ 
+
+/*AWFUL MAP DISPLAY FIX*/
+#map-wrapper {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+
+/*Removing label shadow and background grey*/
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2) {
+    background-color: inherit !important;
+    box-shadow: none !important;
+}
+
+/* DIV containing <p> and <a> tags for Google Maps labels (Text size, colour, weight, etc.)*/
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div:nth-child(1) > div {
+    font-family: "gillsans" !important;
+}
+
+/* DIV for Google Maps label container (Border, BG, Opacity, etc.)*/
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(4) {
+    border-radius: 20px !important;
+}
+
+/*Map Navigation*/
+
+/*Accessibility map zoom*/
+#display-panel {
+    border-bottom: solid 0.5px lightgrey;
+}
+
+/*Poem display*/
+h1.ui-title {
+    width:100%;
+    margin: auto !important;
+}
+
+ .poem_display .ui-content {
+     padding: 0;
+ }
+
+.poem_display .ui-content p {
+    padding: 0 0.5em;
+}
+
+#poem>p {
+    text-indent: -1em;
+    padding: 0 0 0 1.5em;
+    margin-bottom: 0.1em;
+    margin-top: 0;
+}
+
+#poem .poem_title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#poem .poem_byline{
+    font-size: 1.2em;
+}
+
+#poem .poem_line{
+    font-size: 1em;
+}
+
+#poem .poem_bio, #poem .poem_note, #poem .poem_epigraph {
+    font-style: italic;
+    font-size: 0.8em;
+    text-indent: 0em;
+}
+
+#poem .poem_bio, #poem .poem_note {
+    padding: 0 0.5em;
+}
+
+#poem .poem_epigraph {
+    padding: 0 1.5em;
+}
+
+.image_banner {
+    width: 100%;
+}
+
+.image_banner img {
+    width: inherit;
+    height: auto;
+}
+
+.audio-frame {
+    width: 100%;
+    padding: 5%;
+    border-bottom: solid 1px lightgray;
+    margin-bottom: 1.5em;
+}
+
+.audio-frame audio{
+    width: 90%;
+}
+
+.text-size-panel {
+    text-align: center;
+}
+
+
+/*General styling*/
+
+#front_header_image img {
+    max-width: 100%;
+}
+
+#list-container p.location_name{
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black !important;
+    font-weight: bold;
+}
+
+.ui-header {
+    background-color: #172d5f !important;
+    color: #f8f8f8 !important;
+    text-shadow: none !important;
+    border-style: none !important;
+}
+
+.ui-navbar .ui-btn {
+    background-color: #172d5f !important;
+    border-color: #172d5f !important;
+    color: #f8f8f8 !important;
+    text-shadow: none !important;
+}
+
+ui-footer {
+    background-color: #f8f8f8 !important;
+}
+
+.ui-footer .ui-btn {
+    background-color: #172d5f !important;
+    color: #f8f8f8 !important;
+    text-shadow: none !important;
+}
+
+.list-item .ui-btn.poem-link, .list-item .ui-btn.map-link {
+    border-color: #ddd !important;
+}
+
+#map_view .ui-footer .ui-btn,
+#map_view .ui-footer .ui-btn-active, 
+.ui-navbar .ui-btn-active {
+    background-color: #f6f6f6 !important;
+    border-color: #ddd !important;
+    color: black !important;
+    text-shadow: none !important;
+}
+
+ .list-item {
+     border-top: 1px lightgray solid;
+ }
+
+ .list-item .location_name {
+     color: #172d5f;
+ }
+
+.list-item .ui-grid-solo > .ui-block-a {
+    padding: 0 1em;
+}
+
+
+
+
+
+/*CREATING FRONT PAGE*/
+
+.ui-page#front, .ui-page#list_view {
+    height: 100%;
+}
+
+.ui-page#front .ui-content, .ui-page#list_view .ui-content{
+    height: 100%;
+    padding: 0;
+}
+
+
+#front_header_image {
+    max-height: 23%;
+    height: 18%;
+    width: 100%;
+    text-align: center;
+    padding: 1% 0;
+}
+
+#front_header_image img {
+    max-width: 50%;
+    max-height: 100%;
+}
+
+.front_nav {
+    margin: 0 !important;
+    overflow-y: hidden;
+    height: 80% !important;
+}
+
+.front_nav .ui-controlgroup-controls {
+    height: 100%;
+}
+
+.front_navitem {
+    border-radius: 0px !important;
+    height: 25%;
+    padding: 0 !important;
+    border-bottom: 1px solid lightgray;
+    border-left-style: none !important;
+    border-right-style: none !important;
+    background-color: #172d5f !important;
+    color: #f8f8f8 !important;
+    text-shadow: none !important;
+ }
+
+ .front_navitem div {
+     margin:auto;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     height: 1em;
+ }
+
+ .front_nav a {
+     background-size: cover;
+     font-size: 1.2em;
+     max-height: 100% !important;
+ }
+
+ .front_nav .map-link {
+    background-image: url("../img/bg1.jpg");
+ }
+
+ .front_nav .list-link {
+    background-image: url("../img/bg2.jpg");
+ }
+
+ .front_nav .how-to-link {
+    background-image: url("../img/bg3.jpg");
+ }
+
+ .front_nav .about-link {
+    background-image: url("../img/bg4.jpg");
+ }
+
+ 
+
+ /* REDUX Styling */
+
+#ncl-poem-title {
+    text-align: center;
+    margin: 0;
+    padding: 2.5vh 0;
+    width: 100%;
+    top: 0;
+    height: 5vh;
+
+    width:100%;
+    margin: auto !important;
+}
+
+#ncl-poem-map {
+    background-image: url(../img/map-icon.png);
+    background-size: contain;
+    border: none;
+    background-color: rgba(255,255,255,1)!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10vw;
+    width: 10vw;
+    margin: 5px;
+    display: none;
+}
+
+ #ncl-poem-redo, #ncl-poem-print {
+    width: 50%;
+    bottom: 0;
+    text-align: center;
+    position: absolute;
+    border: solid 1px;
+    background-color: white;
+    height: 5vh;
+ }
+
+ #ncl-poem-text {
+    position: absolute;
+    padding: 0 5vw;
+    height: 80vh;
+    top: 15vh;
+    overflow-y: scroll;
+    width: 40vw;
+ }
+
+ #ncl-poem-text p {
+    padding-left: 3em;
+    text-indent: -3em;
+ }
+
+ #poem-number {
+     text-align: center;
+     margin-bottom:1em;
+     font-style: italic;
+ }
+
+ #intro {
+     font-style: italic;
+     color: grey;
+     padding-left: 0 !important;
+     text-indent: 0 !important;
+     text-align: center;
+ }
+
+ #ncl-poem-redo p, #ncl-poem-print p {
+    height: 3vh;
+    margin: 1vh;
+ }
+
+ #ncl-poem-print {
+    right: 0;
+ }
+
+ #ncl-poem-redo {
+    left: 0;
+ }
+
+ #map_view {
+    width: 50vw;
+    height:100vh;
+    float: left;
+    border-right: solid black 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#map-wrapper, #map_view .ui-footer {
+    width:inherit;
+}
+
+#poem-container {
+    float: right;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+}
